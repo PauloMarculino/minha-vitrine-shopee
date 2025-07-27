@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Vitrine Inteligente Shopee</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script> <!-- Ícones Modernos -->
+</head>
+<body>
+    <header>
+        <h1>Vitrine de Achadinhos</h1>
+        <p>Produtos incríveis da Shopee selecionados para você!</p>
+    </header>
+
+    <main>
+        <div class="filters-container">
+            <div class="search-box">
+                <i data-lucide="search"></i>
+                <input type="text" id="searchInput" placeholder="Busque por nome ou palavra-chave...">
+            </div>
+            <div id="categoryFilters" class="category-tags">
+                <!-- Categorias da IA serão inseridas aqui -->
+            </div>
+        </div>
+
+        <div id="loader" class="loader">Carregando produtos...</div>
+
+        <div id="productGrid" class="product-grid">
+            <!-- Cards de produtos serão inseridos aqui via JS -->
+        </div>
+    </main>
+
+    <!-- Chat Inteligente -->
+    <div id="chatWidget" class="chat-widget">
+        <button id="chatToggle" class="chat-toggle">
+            <i data-lucide="message-circle"></i>
+        </button>
+        <div id="chatBox" class="chat-box hidden">
+            <div class="chat-header">
+                <span>Assistente de Compras</span>
+                <button id="closeChat"><i data-lucide="x"></i></button>
+            </div>
+            <div id="chatMessages" class="chat-messages">
+                <div class="chat-message bot">Olá! Como posso ajudar a encontrar seu achadinho hoje?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Pergunte sobre um produto...">
+                <button id="sendChatMsg"><i data-lucide="send"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
